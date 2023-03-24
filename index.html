@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        <h2>Registration Form</h2>
+      </div>
+      <form class="form" id="form">
+        <section class="input-control">
+          <label for="name">Name:</label>
+          <input
+            class="input-value"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+          />
+          <div class="error"></div>
+        </section>
+        <section class="input-control">
+          <label for="gender">Gender: </label>
+          <div class="select-gender flex radiocheck">
+            <div class="item">
+              <input
+                id="female"
+                type="radio"
+                class="input-value gender"
+                name="gender"
+                checked
+                value="female"
+              />
+              <span class="text-1">Female</span>
+            </div>
+            <div class="item">
+              <input
+                id="male"
+                value="male"
+                type="radio"
+                class="input-value"
+                name="gender"
+              />
+              <span class="text-1">Male</span>
+            </div>
+            <div class="item">
+              <input
+                id="different"
+                type="radio"
+                class="input-value gender"
+                name="gender"
+                value="different"
+              />
+              <span class="text-1">Different</span>
+            </div>
+          </div>
+          <div class="error"></div>
+        </section>
+        <section class="input-control">
+          <label for="date">Date of birth:</label>
+          <input type="date" class="input-value" id="date" name="date" />
+          <div class="error"></div>
+        </section>
+        <section class="input-control">
+          <label for="number">Phone number:</label>
+          <input
+            type="tel"
+            name="phoneNumber"
+            id="number"
+            placeholder="Enter your phone number"
+            class="input-value"
+          />
+          <div class="error"></div>
+        </section>
+        <section class="input-control">
+          <label for="email">Email: </label>
+          <input
+            type="email"
+            class="input-value"
+            id="email"
+            name="name"
+            placeholder="Enter your email"
+          />
+          <div class="error"></div>
+        </section>
+        <section class="input-control">
+          <label for="address">Address: </label>
+          <select class="input-value" id="address">
+            <option value="" disabled="disabled">-Address--</option>
+            <option value="Hanoi">Hà Nội</option>
+            <option value="Hochiminh">Hồ Chí Minh</option>
+            <option value="Haiphong">Hải Phòng</option>
+            <option value="Hadong">Hà Đông</option>
+            <option value="America">Mĩ Đình</option>
+          </select>
+          <div class="error"></div>
+        </section>
+        <section class="input-control">
+          <label for="description">Description about yourself:</label>
+          <textarea
+            id="description"
+            name="description"
+            class="input-value"
+            placeholder="tell me about yourself ..."
+            rows="5"
+            cols="50"
+            maxlength="200"
+          ></textarea>
+          <div class="error"></div>
+        </section>
+        <section class="input-control">
+          <label for="strength">Your strength:</label>
+          <div class="input-strength flex radiocheck">
+            <div>
+              <input
+                type="checkbox"
+                id="swim"
+                class="input-value health"
+                name="strength"
+              />
+              <span class="text-1">Swim 🏊</span>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="soccer"
+                class="input-value health"
+                name="strength"
+              />
+              <span class="text-1">Soccer ⚽</span>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="badminton"
+                class="input-value health"
+                name="strength"
+              />
+              <span class="text-1">Badminton 🏸</span>
+            </div>
+          </div>
+        </section>
+      </form>
+      <div class="final-section flex">
+        <button
+          class="submit btn"
+          id="button"
+          onclick="HandleSubmit()"
+          type="button"
+        >
+          Submit
+        </button>
+        <button class="update btn">Update</button>
+      </div>
+    </main>
+    <div id="add-table"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
